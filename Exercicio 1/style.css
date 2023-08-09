@@ -102,7 +102,7 @@ body{
     line-height: 4rem;
 }
 
-.home-text .p {
+.home-text .text-p{
     margin-bottom: 4rem;
 }
 
@@ -118,4 +118,50 @@ body{
 
 .home-btn:hover {
     background: #d63a25;
+}
+
+.home-img img{
+    width: 100%;
+}
+
+@media (max-width:785px) {
+    .navigation{
+        padding: 18px 20px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 70%;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: #fff;
+        gap: -10px;
+        transition: 0.3s;
+    }
+
+    .nav-menu.ativo {
+        right:0;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
 }
